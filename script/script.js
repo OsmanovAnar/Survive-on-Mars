@@ -1,8 +1,8 @@
 //--------------------------------------- Аудио файлы -------------------------------------------------------------
-const powerLossSound = new Audio("../sounds/потеря-мощности.mp3");
-const crashLoadingSound = new Audio("../sounds/аварийная-посадка.mp3");
-const takeoffSound = new Audio("../sounds/Взлет-космического-корабля.mp3");
-const backgroundSound = new Audio("../sounds/фон.mp3");
+const powerLossSound = new Audio("/sounds/потеря-мощности.mp3");
+const crashLoadingSound = new Audio("/sounds/аварийная-посадка.mp3");
+const takeoffSound = new Audio("/sounds/Взлет-космического-корабля.mp3");
+const backgroundSound = new Audio("/sounds/фон.mp3");
 
 //--------------------------------------- Элементы ----------------------------------------------------------------
 const startGame = document.querySelector(".startGame");
