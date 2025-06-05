@@ -17,7 +17,7 @@ const endScene = document.querySelector(".the-end");
 //--------------------------------------- Аудио файлы -------------------------------------------------------------
 const powerLossSound = new Audio("../sounds/powerLoss.mp3");
 const crashLoadingSound = new Audio("../sounds/crashLanding.mp3");
-const takeoffSound = new Audio("../sounds/shipTakeoff.mp3.mp3");
+const takeoffSound = new Audio("../sounds/shipTakeoff.mp3.");
 const backgroundSound = new Audio("../sounds/backgroundSound.mp3");
 //--------------------------------------- механики игры ----------------------------------------------------------
 let currentQuestion = 0;
