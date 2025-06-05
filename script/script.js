@@ -161,11 +161,11 @@ const questions = [
 // Пролог 
 nextBtn.addEventListener("click", () => {
     questionsElem.innerHTML = dialog[1].Player;
-    characterImg.src = "../image/cosmonaut.png";
+    characterImg.src = "image/cosmonaut.png";
 
     nextBtn.addEventListener("click", () => {
         questionsElem.innerHTML = dialog[2].Matt;
-        characterImg.src = "../image/Matt-Damon.png";
+        characterImg.src = "image/Matt-Damon.png";
         nextBtn.textContent = "Конечно!";
 
         nextBtn.addEventListener("click", () => {
@@ -218,7 +218,7 @@ nextBtn.addEventListener("click", startGameDialog);
 
 function startGameDialog() {
     questionsElem.innerHTML = dialog[1].Player;
-    characterImg.src = "../image/cosmonaut.png";
+    characterImg.src = "image/cosmonaut.png";
     nextBtn.textContent = "Что дальше?";
     nextBtn.removeEventListener("click", startGameDialog);
     nextBtn.addEventListener("click", mattResponse);
@@ -226,7 +226,7 @@ function startGameDialog() {
 
 function mattResponse() {
     questionsElem.innerHTML = dialog[2].Matt;
-    characterImg.src = "../image/Matt-Damon.png";
+    characterImg.src = "image/Matt-Damon.png";
     nextBtn.textContent = "Конечно!";
     nextBtn.removeEventListener("click", mattResponse);
     nextBtn.addEventListener("click", showQuestion);
