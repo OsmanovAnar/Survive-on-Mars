@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+
+}
+
+button {
+    border: none;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.startGame {
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/menuBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(182, 119, 0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & #play-btn {
+        width: 150px;
+        height: 50px;
+        background-color: orange;
+    }
+}
+
+
+
+.first-scene {
+    background-image: url(../image/to-mars-track.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#shipImg {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 400px;
+    top: 400px;
+    animation: fly-to-Mars 6s ease-in forwards;
+}
+
+@keyframes fly-to-Mars {
+    0% {
+        left: 400px;
+        top: 400px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    60% {
+        left: 1000px;
+        top: 400px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    70% {
+        left: 1080px;
+        top: 410px;
+        transform: rotate(-10deg);
+    }
+
+    80% {
+        left: 1120px;
+        top: 390px;
+        transform: rotate(15deg);
+    }
+
+    90% {
+        left: 1160px;
+        top: 420px;
+        transform: rotate(-30deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        left: 1200px;
+        top: 500px;
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+}
+
+.second-scene {
+    background-image: url(../image/mars.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+.matt-and-questions {
+    padding: 30px;
+
+    width: 800px;
+    min-height: 350px;
+
+    background-color: rgba(219, 156, 80, 0.95);
+    border-radius: 15px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+
+    & #matt-damons {
+        padding-right: 20px;
+        width: 250px;
+        height: 270px;
+
+        border-right: 1px solid #3f2d14;
+    }
+
+
+    & .questions {
+        text-align: center;
+        font-size: 20px;
+        text-align: center;
+        list-style: none;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    & #next-btn {
+        min-width: 90px;
+        min-height: 40px;
+        align-self: flex-end;
+        background-color: #3f2d14;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+
+
+        &#next-btn:hover {
+            background-color: #5e3c1a;
+        }
+    }
+
+    & #player {
+        width: 230px;
+        height: 240px;
+        transform: scaleX(-1);
+    }
+
+}
+
+#crushenShip {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    right: 150px;
+    animation: shipLoading 18s forwards;
+}
+
+@keyframes shipLoading {
+    0% {
+        top: 0;
+        right: 150px;
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    60% {
+        transform: rotate(-45deg);
+    }
+
+    70% {
+        transform: rotate(0);
+    }
+
+    100% {
+        top: 370px;
+        right: 150px;
+        rotate: 0;
+    }
+}
+
+
+.third-scene {
+    background-image: url(../image/mars.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+
+
+
+    & .flyHome {
+        width: 150px;
+        position: absolute;
+        top: 370px;
+        right: 150px;
+        animation: flyHome 40s linear forwards;
+    }
+}
+
+
+@keyframes flyHome {
+
+    0% {
+        top: 370px;
+        right: 150px;
+    }
+
+    80% {
+        top: 370px;
+        right: 150px;
+    }
+
+    100% {
+        top: -200px;
+    }
+}
+
+.the-end {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    background-image: url(../image/menuBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+
+    display: none;
+}
